@@ -1,0 +1,31 @@
+body {
+  box-sizing: border-box;
+}
+
+.menu {
+  width: 15%;
+  border-right: solid black 1px;
+  position:fixed;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  text-align: center;
+  display: block;
+}
+
+
+.editor {
+  width: 85%;
+}
+
+.map {
+  margin: 100px auto;
+}
+
+.sector {
+  height: 50px;
+  width: 50px;
+  border: 1px black solid;
+}
