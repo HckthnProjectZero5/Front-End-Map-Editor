@@ -1,5 +1,6 @@
-$('.brick').draggable();
-
+$('.brick').draggable({
+  helper: 'clone'
+});
 
 
 $('div', '#map').each(function() {
