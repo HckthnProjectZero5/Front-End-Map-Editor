@@ -1,6 +1,10 @@
 body {
   box-sizing: border-box; }
 
+.container {
+  width: 100%;
+  margin: 0 auto; }
+
 .menu {
   width: 15%;
   border-right: solid black 1px;
@@ -11,15 +15,42 @@ body {
   bottom: 0;
   left: 0;
   text-align: center;
-  display: block; }
+  display: inline-block;
+  float: left; }
+
+.menu h3 {
+  margin-bottom: 75px; }
+
+.brick {
+  background-image: url(../images/bricktexture.jpg);
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  float: left; }
+
+.brickDesc {
+  display: inline-block;
+  float: left;
+  margin-left: 50px;
+  margin-top: 15px;
+  margin-right: 10px; }
 
 .editor {
-  width: 85%; }
+  margin-left: 15%;
+  width: 85%;
+  display: inline-block; }
 
 .map {
-  margin: 100px auto; }
+  margin: 100px auto;
+  width: 156px; }
 
 .sector {
   height: 50px;
   width: 50px;
-  border: 1px black solid; }
+  border: 1px black solid;
+  display: inline-block;
+  float: left; }
+
+.sector:nth-child(3n + 1) {
+  clear: both; }
