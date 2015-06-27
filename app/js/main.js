@@ -1,8 +1,6 @@
 
 $('.brick').draggable({
-    helper: function(event) {
-    return $('<div class="brick">Hullo!</div>');
-  },
+    helper: "clone",
   snap: "#map div",
   snapMode: "inner",
   stop: function( event, ui ) {
@@ -12,10 +10,8 @@ $('.brick').draggable({
 $('#map div').each(function() {
   var $div = $(this);
   $div.droppable({
-    drop: function() {
-
-        }
-    });
+    drop: function(even, ui) {
+      $(this).append($(ui.draggable).clone());
+    }
+  });
 });
-
-
