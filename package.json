@@ -1,0 +1,37 @@
+{
+  "name": "Template",
+  "version": "1.0.0",
+  "description": "A template for building new apps",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tiy-atl-js-q2-2015/Template.git"
+  },
+  "contributors": [
+    "JD Isaacks",
+    "Tim Whitacre"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiy-atl-js-q2-2015/Template/issues"
+  },
+  "homepage": "https://github.com/tiy-atl-js-q2-2015/Template",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-declare": "^0.3.0",
+    "gulp-handlebars": "^4.0.0",
+    "gulp-htmlhint": "^0.1.1",
+    "gulp-jshint": "^1.11.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.1",
+    "gulp-server-livereload": "^1.4.0",
+    "gulp-wrap": "^0.11.0",
+    "jshint-stylish": "^2.0.0",
+    "main-bower-files": "^2.8.0"
+  }
+}
