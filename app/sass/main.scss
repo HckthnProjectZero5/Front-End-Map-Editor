@@ -30,6 +30,7 @@ body {
   width: 50px;
   display: inline-block;
   float: left;
+  position: absolute;
 }
 
 .brickDesc {
@@ -49,6 +50,7 @@ body {
 #map {
   margin: 100px auto;
   width: 156px;
+  position: relative;
 }
 
 .sector {

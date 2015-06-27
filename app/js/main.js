@@ -1,5 +1,7 @@
 $('.brick').draggable({
-  helper: 'clone'
+  helper: function(event) {
+    return $('<div class="brick">Hullo!</div>');
+  }
 });
 
 
