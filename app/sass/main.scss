@@ -17,10 +17,34 @@ body {
   text-align: center;
   display: inline-block;
   float: left;
+  box-shadow: 5px 3px 3px black;
 }
 
 .menu h3 {
-  margin-bottom: 75px;
+  margin-bottom: 15px;
+}
+
+.menu h4 {
+  margin-bottom: 50px;
+}
+
+form {
+  height: 250px;
+}
+
+.label {
+  clear: both;
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.input {
+  clear:both;
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+
 }
 
 .brick {
@@ -30,7 +54,6 @@ body {
   width: 30px;
   display: inline-block;
   float: left;
-  position: absolute;
 }
 
 .brickDesc {
@@ -42,14 +65,13 @@ body {
 }
 
 .editor {
-  margin-left: 15%;
-  width: 1200px;
+  margin-left: 250px;
   display: inline-block;
 }
 
 #map {
   margin: 100px 100px;
-  position: relative;
+  // width: 156px;
 }
 
 .sector {

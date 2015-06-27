@@ -8,8 +8,6 @@ var Block = function(x){
 };
 
 
-
-
 $('.brick').draggable({
 
   snap: "#map div", snapMode: "inner", helper: 'clone',
@@ -17,8 +15,8 @@ $('.brick').draggable({
     var newBlock = new Block();
     var pos = ui.position;
     console.log(pos);
-    newBlock.x = (pos.left - 352)/30;
-    newBlock.y = (pos.top - 82)/30;
+    newBlock.x = (pos.left - 350)/30;
+    newBlock.y = (pos.top - 100)/30;
     console.log(newBlock);
  }
 
