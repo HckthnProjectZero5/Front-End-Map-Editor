@@ -27,8 +27,9 @@ $('.brick').draggable({
   stop: function( event, ui ) {
     var newBlock = new Block();
     var pos = ui.position;
-    newBlock.x = (pos.left - 350)/30;
-    newBlock.y = (pos.top - 100)/30;
+    console.log(ui.position);
+    newBlock.x = (pos.left - 775)/30;
+    newBlock.y = (pos.top - 25)/30;
     console.log(newBlock);
     obstaclePosition.push(newBlock);
  }
