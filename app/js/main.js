@@ -1,9 +1,26 @@
+var $grid = $('#map');
+for (i = 0; i < 20; i++) {
+    var row = '<div>';
+    for (j = 0; j < 20; j++) {
+      row += '<div class="sector"></div>';
+    }
+  row += '</div>';
+  $grid.append(row);
+}
+
+var coordinates = function(element) {
+  element = $(element);
+  var top = element.position().top;
+  var left = element.position().left;
+  $('#results').text('X: ' + left + ' ' + 'Y: ' + top);
+};
 
 $('.brick').draggable({
-    helper: "clone",
+  helper: "clone",
   snap: "#map div",
   snapMode: "inner",
-  stop: function( event, ui ) {
+  stop: function() {
+    coordinates('.brick');
   }
 });
 
