@@ -43,10 +43,16 @@ $('.brick').draggable({
 $('#map div').each(function() {
   var $div = $(this);
   $div.droppable({
-    drop: function(even, ui) {
-      $(this).append($(ui.draggable).clone());
-      $(ui.draggable).draggable('enable');
-      // makeDraggable(ui.draggable);
+    // drop: function(even, ui) {
+    //   $(this).append($(ui.draggable).clone());
+    //   $(ui.draggable).draggable('enable');
+    // }
+    drop: function(event, ui) {
+      var clonedElem = $(ui.draggable).clone();
+      $(this).append(clonedElem);
+      $(element).draggable ({
+        helper: 'clone'
+      });
     }
   });
 });
