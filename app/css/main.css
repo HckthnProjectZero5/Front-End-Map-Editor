@@ -31,7 +31,7 @@ body {
 .brickDesc {
   display: inline-block;
   float: left;
-  margin-left: 50px;
+  margin-left: 25px;
   margin-top: 15px;
   margin-right: 10px; }
 
@@ -40,7 +40,7 @@ body {
   width: 85%;
   display: inline-block; }
 
-.map {
+#map {
   margin: 100px auto;
   width: 156px; }
 
