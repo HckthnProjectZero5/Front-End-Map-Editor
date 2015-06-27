@@ -4,21 +4,18 @@ $('.brick').draggable({
     return $('<div class="brick">Hullo!</div>');
   },
   snap: "#map div",
-  snapMode: "inner"
+  snapMode: "inner",
+  stop: function( event, ui ) {
+  }
 });
-
 
 $('#map div').each(function() {
   var $div = $(this);
   $div.droppable({
     drop: function() {
-      // $(this).addClass('dropped').
-      // css({
-      //     top: $div.offset().top,
-      //     left: $div.offset().left
-      // });
-      // $('#map').addClass('focus');
+
         }
     });
 });
+
 
