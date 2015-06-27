@@ -27,7 +27,8 @@ body {
   width: 30px;
   display: inline-block;
   float: left;
-  position: absolute; }
+  position: absolute;
+  cursor: pointer; }
 
 .brickDesc {
   display: inline-block;
@@ -37,8 +38,7 @@ body {
   margin-right: 10px; }
 
 .editor {
-  margin-left: 15%;
-  width: 1200px;
+  margin-left: 250px;
   display: inline-block; }
 
 #map {
