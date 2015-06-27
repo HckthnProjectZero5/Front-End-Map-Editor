@@ -1,7 +1,12 @@
+var obstaclePosition = [];
+
+
+
 
 $('.brick').draggable({
- snap: "#map div", snapMode: "inner", helper: 'clone',
- stop: function( event, ui ) {
+  snap: "#map div", snapMode: "inner", helper: 'clone',
+  stop: function( event, position ) {
+    console.log(position);
 
  }
 });
