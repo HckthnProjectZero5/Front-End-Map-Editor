@@ -55,16 +55,19 @@ form {
   margin-right: 10px; }
 
 .editor {
-  margin-left: 250px;
-  display: inline-block; }
+  margin-left: 275px;
+  margin-top: 100px;
+  display: inline-block;
+  background-image: url(../images/background.jpg);
+  background-size: cover; }
 
 #map {
-  margin: 100px 100px; }
+  margin-left: 500px; }
 
 .sector {
   height: 30px;
   width: 30px;
-  box-shadow: 1px 0 0 0 black, 0 1px 0 0 black, 1px 1px 0 0 black, 1px 0 0 0 black inset, 0 1px 0 0 black inset;
+  box-shadow: 2px 0 0 0 black, 0 2px 0 0 black, 2px 2px 0 0 black, 2px 0 0 0 black inset, 0 1px 0 0 black inset;
   display: inline-block;
   float: left; }
 
