@@ -66,6 +66,14 @@ body {
   float: left;
 }
 
-.sector:nth-child(3n + 1) {
+.sector:nth-child(20n + 1) {
   clear: both;
+}
+
+div .brick .dropped {
+  background-image: url(../images/bricktexture.jpg);
+}
+
+div #map .focus {
+  border: 1px solid red;
 }
