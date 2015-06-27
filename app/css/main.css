@@ -26,7 +26,8 @@ body {
   height: 30px;
   width: 30px;
   display: inline-block;
-  float: left; }
+  float: left;
+  position: absolute; }
 
 .brickDesc {
   display: inline-block;
@@ -41,7 +42,8 @@ body {
   display: inline-block; }
 
 #map {
-  margin: 100px 100px; }
+  margin: 100px 100px;
+  position: relative; }
 
 .sector {
   height: 30px;
