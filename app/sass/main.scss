@@ -26,8 +26,8 @@ body {
 .brick {
   background-image: url(../images/bricktexture.jpg);
   background-size: cover;
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   display: inline-block;
   float: left;
 }
@@ -52,8 +52,8 @@ body {
 }
 
 .sector {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   box-shadow:
     1px 0 0 0 black,
     0 1px 0 0 black,
