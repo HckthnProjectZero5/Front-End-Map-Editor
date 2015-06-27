@@ -1,4 +1,7 @@
 // Constructor for individual objects on the map
+
+var obstaclePosition = [];
+
 var Block = function(x){
   this.length = 1;
   this.width = 1;

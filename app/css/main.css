@@ -65,7 +65,12 @@ form {
   display: inline-block; }
 
 #map {
+<<<<<<< HEAD
   margin: 100px 100px; }
+=======
+  margin: 108px 100px;
+  position: relative; }
+>>>>>>> 89f475a79efebbab2677daef0da596aee4498012
 
 .sector {
   height: 30px;
@@ -82,3 +87,6 @@ div .brick .dropped {
 
 div #map .focus {
   border: 1px solid red; }
+
+#results {
+  text-align: center; }
