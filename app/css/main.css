@@ -9,7 +9,6 @@ body {
   width: 15%;
   border-right: solid black 1px;
   position: fixed;
-  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -48,7 +47,7 @@ body {
 .sector {
   height: 50px;
   width: 50px;
-  border: 1px black solid;
+  box-shadow: 1px 0 0 0 black, 0 1px 0 0 black, 1px 1px 0 0 black, 1px 0 0 0 black inset, 0 1px 0 0 black inset;
   display: inline-block;
   float: left; }
 
