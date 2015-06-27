@@ -23,32 +23,35 @@ body {
 }
 
 .heading {
-  // background-image: url(../images/blueprint.jpeg);
-  height: 175px;
+  // height: 175px;
   background-size: auto;
   background-size: contain;
+  border-bottom: 1px black solid;
+  width: 225px;
+  margin-left: 12px;
+  margin-bottom: 25px;
 }
 
 .menu h3 {
   margin-bottom: 15px;
-  padding-top: 50px;
+  padding-top: 25px;
   font-size: 22px;
 }
 
 .menu h4 {
-  margin-bottom: 100px;
+  margin-bottom: 25px;
   font-size: 18px;
 }
 
 form {
-  height: 250px;
+  // height: 250px;
 }
 
 .label {
   clear: both;
   display: block;
   width: 80%;
-  margin: 10px auto;
+  margin: 10px auto 0px auto;
 }
 
 .input {
@@ -56,6 +59,25 @@ form {
   display: block;
   width: 80%;
   margin: 10px auto;
+}
+
+.budget {
+  padding-top: -100px;
+}
+
+#budget {
+  margin-bottom: 25px;
+}
+
+#submit {
+  margin-bottom: 25px;
+}
+
+.menuItem {
+  width: 100%;
+  height: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px;
 }
 
 .brick {
@@ -67,11 +89,11 @@ form {
   float: left;
 }
 
-.brickDesc {
+.itemDesc {
   display: inline-block;
   float: left;
   margin-left: 25px;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-right: 10px;
 }
 
