@@ -34,40 +34,23 @@ $('.brick').draggable({
   }
 });
 
-// function makeDraggable(el) {
-//   el.draggable ({
-//     revert: "invalid"
-//   });
-// }
-
 $('#map div').each(function() {
   var $div = $(this);
   $div.droppable({
-    // drop: function(even, ui) {
-    //   $(this).append($(ui.draggable).clone());
-    //   $(ui.draggable).draggable('enable');
-    // }
-    drop: function(event, ui) {
-      var clonedElem = $(ui.draggable).clone();
-      $(this).append(clonedElem);
-      $(element).draggable ({
-        helper: 'clone'
+    drop: function (event, ui) {
+      // Re-enable draggability of dropped block
+      if ($(ui.draggable).hasClass('copied')) {
+        return;
+      }
+      var droppedItem = $(ui.draggable).clone().addClass('copied');
+      droppedItem.draggable ({
+        snap: "#map div",
+        snapMode: "inner",
       });
+      $(this).append(droppedItem);
     }
   });
 });
-
-/* drop: function(event, ui) {
-      if ($(ui.helper).hasClass('cloned')) {
-        return;
-      }
-      var clonedEl = $(ui.helper).clone();
-      clonedEl.addClass('cloned');
-      clonedEl.draggable({
-        snap: '#grid, div',
-        snapMode: 'inner'
-      });
-      $(this).append(clonedEl); */
 
 // Click event creating map object and sending it to server
 $('#submit').click(function(){
