@@ -6,7 +6,7 @@ body {
   margin: 0 auto; }
 
 .menu {
-  width: 15%;
+  width: 250px;
   border-right: solid black 1px;
   position: fixed;
   top: 0;
@@ -37,12 +37,11 @@ body {
 
 .editor {
   margin-left: 15%;
-  width: 85%;
+  width: 1200px;
   display: inline-block; }
 
 #map {
-  margin: 100px auto;
-  width: 156px; }
+  margin: 100px 100px; }
 
 .sector {
   height: 50px;
@@ -51,7 +50,7 @@ body {
   display: inline-block;
   float: left; }
 
-.sector:nth-child(3n + 1) {
+.sector:nth-child(20n + 1) {
   clear: both; }
 
 div .brick .dropped {
