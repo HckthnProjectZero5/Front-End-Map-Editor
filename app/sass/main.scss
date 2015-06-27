@@ -67,3 +67,11 @@ body {
 .sector:nth-child(3n + 1) {
   clear: both;
 }
+
+div .brick .dropped {
+  background-image: url(../images/bricktexture.jpg);
+}
+
+div #map .focus {
+  border: 1px solid red;
+}
