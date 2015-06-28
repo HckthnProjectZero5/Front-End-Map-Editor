@@ -1,3 +1,5 @@
+$("#dialog").dialog({ autoOpen: false });
+
 // Constructor for individual objects on the map
 
 var obstaclePosition = [];
@@ -105,7 +107,7 @@ $('.recycleBin').droppable({
   }
 });
 
-$("#dialog").dialog({ autoOpen: false });
+
 
 
 //Click event to clear map creation notification
