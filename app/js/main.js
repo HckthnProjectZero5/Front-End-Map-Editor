@@ -16,14 +16,14 @@ var Block = function(x){
 // Makes post request to save map on in the database
 
 var url = 'https://fierce-wave-2814.herokuapp.com/levels/new';
-
 var postMap = function(map){
   $.ajax({
     url: url,
     type: 'POST',
     data: map
     }).done( function (data) {
-      console.log('in postmap function:' + data);
+      $( "#dialog" ).dialog( "open" );
+
     });
   };
 
@@ -35,6 +35,7 @@ $('.brick, .tape, .computer').draggable({
     var newBlock = new Block();
     var pos = ui.position;
     newBlock.x = (pos.left - 575)/28;
+    newBlock.y = (pos.top - 25)/28;
     obstaclePosition.push(newBlock);
   }
 });
@@ -44,6 +45,7 @@ $('#map div').each(function() {
   $div.droppable({
     hoverClass: 'highlight',
     drop: function (event, ui) {
+
       // Re-enable draggability of dropped block
       if ($(ui.draggable).hasClass('copied')) {
         return;
@@ -73,15 +75,14 @@ $('#map div').each(function() {
         }
       });
       $(this).append(droppedItem);
-    }
+    },
   });
 });
 
 
 // Click event creating map object and sending it to server
 $('#submit').on('click', function(e) {
-  // e.preventDefault();
-
+  e.preventDefault();
   var name = $('#title').val();
   var budget = $('#budget').val();
   var map = {
@@ -91,7 +92,6 @@ $('#submit').on('click', function(e) {
     map: obstaclePosition
     }
   };
-
   postMap(map);
 
 });
@@ -103,4 +103,12 @@ $('.recycleBin').droppable({
     ui.helper.hide('explode');
     $(ui.draggable).remove();
   }
+});
+
+$("#dialog").dialog({ autoOpen: false });
+
+
+//Click event to clear map creation notification
+$('#reset').on('click', function(e) {
+  location.reload();
 });
