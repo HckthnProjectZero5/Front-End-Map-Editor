@@ -39,6 +39,19 @@ $('.brick, .tape, .computer').draggable({
     newBlock.y = (pos.top - 25)/28;
     console.log(newBlock);
     obstaclePosition.push(newBlock);
+  },
+  start: function( event, ui) {
+    var pos = ui.position;
+    console.log(pos);
+    x = (pos.left - 575)/28;
+    y = (pos.top - 25)/28;
+    var newArray = [];
+    obstaclePosition.map(function(item){
+      if (item.x !== x || item.y !== y){
+        newArray.push(item);
+        obstaclePosition = newArray;
+      }
+    });
   }
 });
 
