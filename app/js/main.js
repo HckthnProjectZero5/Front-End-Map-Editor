@@ -23,7 +23,7 @@ var postMap = function(map){
     type: 'POST',
     data: map
     }).done( function (data) {
-      console.log(data);
+      console.log('in postmap function:' + data);
     });
   };
 
@@ -34,24 +34,11 @@ $('.brick, .tape, .computer').draggable({
   stop: function( event, ui ) {
     var newBlock = new Block();
     var pos = ui.position;
-    console.log(ui.position);
+    console.log('in drag/drop function:' + ui.position);
     newBlock.x = (pos.left - 575)/28;
     newBlock.y = (pos.top - 25)/28;
-    console.log(newBlock);
+    console.log('new block object: ' + newBlock);
     obstaclePosition.push(newBlock);
-  },
-  start: function( event, ui) {
-    var pos = ui.position;
-    console.log(pos);
-    x = (pos.left - 575)/28;
-    y = (pos.top - 25)/28;
-    var newArray = [];
-    obstaclePosition.map(function(item){
-      if (item.x !== x || item.y !== y){
-        newArray.push(item);
-        obstaclePosition = newArray;
-      }
-    });
   }
 });
 
@@ -66,13 +53,24 @@ $('#map div').each(function() {
       }
       var droppedItem = $(ui.draggable).clone().addClass('copied');
       droppedItem.draggable ({
-        snap: "#map div",
-        snapMode: "inner",
+        snap: '#map div',
+        snapMode: 'inner',
+        start: function(event, ui) {
+          reDraggedBlockX = ($(this).position().left - 575)/28;
+          reDraggedBlockY = ($(this).position().top - 25)/28;
+          console.log('here are redragged coordinates: ' + reDraggedBlockX + ' and ' + reDraggedBlockY);
+          for (var i = 0; i < obstaclePosition.length; i++) {
+            var obj = obstaclePosition[i];
+
+            if(obj.x === reDraggedBlockX && obj.y === reDraggedBlockY) {
+              obstaclePosition.splice(i, 1);
+              i--;
+            }
+            console.log('new obstacle position array: ' + obstaclePosition);
+          }
+        }
       });
       $(this).append(droppedItem);
-      var drag_id = $(ui.draggable).attr("id");
-      var targetElem = $(this).attr("id");
-      deleteMe = true;
     }
   });
 });
@@ -94,8 +92,6 @@ $('#submit').on('click', function(e) {
 
   postMap(map);
 
-
-  console.log(map);
 });
 
 
