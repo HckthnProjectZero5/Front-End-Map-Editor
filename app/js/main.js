@@ -1,6 +1,7 @@
 // Establishes an array of objects on the map
 var obstaclePosition = [];
 
+
 // Constructor for individual objects on the map
 var Block = function(x){
   this.length = 1;
@@ -9,17 +10,21 @@ var Block = function(x){
   this.y = '';
 };
 
-// Constructor for entire map object
-var Map = function(x){
-  this.name = $('#title').val();
-  this.budget = $('#budget').val();
-  this.map = obstaclePosition;
-};
 
 // Makes post request to save map on in the database
-var postMap = function(){
 
-};
+var url = 'https://fierce-wave-2814.herokuapp.com/levels/new';
+
+var postMap = function(map){
+  $.ajax({
+    url: url,
+    type: 'POST',
+    data: map
+    }).done( function (data) {
+      console.log(data);
+    });
+  };
+
 
 // Drag and drop functionality for building blocks
 $('.brick').draggable({
@@ -28,8 +33,8 @@ $('.brick').draggable({
     var newBlock = new Block();
     var pos = ui.position;
     console.log(ui.position);
-    newBlock.x = (pos.left - 775)/30;
-    newBlock.y = (pos.top - 25)/30;
+    newBlock.x = (pos.left - 775)/28;
+    newBlock.y = (pos.top - 25)/28;
     console.log(newBlock);
     obstaclePosition.push(newBlock);
  }
@@ -44,8 +49,23 @@ $('#map div').each(function() {
   });
 });
 
+
 // Click event creating map object and sending it to server
-$('#submit').click(function(){
-  Map();
-  postMap();
+$('#submit').on('click', function(e) {
+  e.preventDefault();
+
+  var name = $('#title').val();
+  var budget = $('#budget').val();
+  var map = {
+  properties: {
+    name: name,
+    budget: budget,
+    map: obstaclePosition
+    }
+  };
+
+  postMap(map);
+
+
+  console.log(map);
 });
