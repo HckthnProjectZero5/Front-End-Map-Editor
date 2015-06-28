@@ -70,7 +70,8 @@ body {
   height: 28px;
   width: 28px;
   display: inline-block;
-  float: left; }
+  float: left;
+  cursor: move; }
 
 .itemDesc {
   display: inline-block;
@@ -78,6 +79,17 @@ body {
   margin-left: 25px;
   margin-top: 5px;
   margin-right: 10px; }
+
+.recycleBin {
+  background-image: url(../images/recycle_bin.png);
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  float: left;
+  margin: 25px auto;
+  cursor: pointer;
+  margin: 10px 100px; }
 
 .editor {
   margin-left: 275px;

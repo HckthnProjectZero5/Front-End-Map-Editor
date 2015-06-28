@@ -58,3 +58,11 @@ $('#submit').click(function(){
   Map();
   postMap();
 });
+
+
+// Drop blocks in recycle bin
+$('.recycleBin').droppable({
+  drop: function (event, ui) {
+    ui.helper.hide('explode');
+  }
+});
