@@ -35,7 +35,33 @@ $('.brick').draggable({
     var newBlock = new Block();
     var pos = ui.position;
     console.log(ui.position);
-    newBlock.x = (pos.left - 775)/28;
+    newBlock.x = (pos.left - 575)/28;
+    newBlock.y = (pos.top - 25)/28;
+    console.log(newBlock);
+    obstaclePosition.push(newBlock);
+  }
+});
+
+$('.tape').draggable({
+  snap: "#map div", snapMode: "inner", helper: 'clone',
+  stop: function( event, ui ) {
+    var newBlock = new Block();
+    var pos = ui.position;
+    console.log(ui.position);
+    newBlock.x = (pos.left - 575)/28;
+    newBlock.y = (pos.top - 25)/28;
+    console.log(newBlock);
+    obstaclePosition.push(newBlock);
+  }
+});
+
+$('.computer').draggable({
+  snap: "#map div", snapMode: "inner", helper: 'clone',
+  stop: function( event, ui ) {
+    var newBlock = new Block();
+    var pos = ui.position;
+    console.log(ui.position);
+    newBlock.x = (pos.left - 575)/28;
     newBlock.y = (pos.top - 25)/28;
     console.log(newBlock);
     obstaclePosition.push(newBlock);
