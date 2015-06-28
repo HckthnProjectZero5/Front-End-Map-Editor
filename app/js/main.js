@@ -38,6 +38,7 @@ $('.brick').draggable({
 $('#map div').each(function() {
   var $div = $(this);
   $div.droppable({
+    hoverClass: 'highlight',
     drop: function (event, ui) {
       // Re-enable draggability of dropped block
       if ($(ui.draggable).hasClass('copied')) {
@@ -49,6 +50,9 @@ $('#map div').each(function() {
         snapMode: "inner",
       });
       $(this).append(droppedItem);
+      var drag_id = $(ui.draggable).attr("id");
+      var targetElem = $(this).attr("id");
+      deleteMe = true;
     }
   });
 });
@@ -64,5 +68,6 @@ $('#submit').click(function(){
 $('.recycleBin').droppable({
   drop: function (event, ui) {
     ui.helper.hide('explode');
+    $(ui.draggable).remove();
   }
 });
