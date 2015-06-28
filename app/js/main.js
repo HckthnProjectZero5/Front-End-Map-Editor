@@ -34,10 +34,7 @@ $('.brick, .tape, .computer').draggable({
   stop: function( event, ui ) {
     var newBlock = new Block();
     var pos = ui.position;
-    console.log('in drag/drop function:' + ui.position);
     newBlock.x = (pos.left - 575)/28;
-    newBlock.y = (pos.top - 25)/28;
-    console.log('new block object: ' + newBlock);
     obstaclePosition.push(newBlock);
   }
 });
@@ -58,7 +55,7 @@ $('#map div').each(function() {
         start: function(event, ui) {
           reDraggedBlockX = ($(this).position().left - 575)/28;
           reDraggedBlockY = ($(this).position().top - 25)/28;
-          console.log('here are redragged coordinates: ' + reDraggedBlockX + ' and ' + reDraggedBlockY);
+
           for (var i = 0; i < obstaclePosition.length; i++) {
             var obj = obstaclePosition[i];
 
@@ -66,8 +63,13 @@ $('#map div').each(function() {
               obstaclePosition.splice(i, 1);
               i--;
             }
-            console.log('new obstacle position array: ' + obstaclePosition);
           }
+        },
+        stop: function(event, ui) {
+          var newBlock = new Block();
+          newBlock.x = ($(this).position().left - 575)/28;
+          newBlock.y = ($(this).position().top - 25)/28;
+          obstaclePosition.push(newBlock);
         }
       });
       $(this).append(droppedItem);
