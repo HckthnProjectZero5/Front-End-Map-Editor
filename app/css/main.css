@@ -1,7 +1,7 @@
 body {
   box-sizing: border-box;
   background-color: #EFEFEB;
-  font-family: 'Orbitron', sans-serif; }
+  font-family: 'Roboto', sans-serif; }
 
 .container {
   width: 100%;
@@ -128,7 +128,7 @@ body {
   float: left; }
 
 .highlight {
-  box-shadow: 0px 0px 6px red; }
+  box-shadow: 1px 1px 3px 3px red; }
 
 .sector:nth-child(20n + 1) {
   clear: both; }
@@ -138,3 +138,6 @@ div .brick .dropped {
 
 div #map .focus {
   border: 1px solid red; }
+
+.ui-dialog {
+  opacity: 0.9; }
