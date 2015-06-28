@@ -18,9 +18,7 @@ body {
   text-align: center;
   display: inline-block;
   float: left;
-  box-shadow: 5px 3px 3px black;
-  overflow-y: scroll;
-  overflow-x: hidden; }
+  box-shadow: 5px 3px 3px black; }
 
 .heading {
   background-size: auto;
@@ -64,7 +62,7 @@ body {
   width: 100%;
   height: 25px;
   margin-bottom: 25px;
-  margin-left: 40px; }
+  margin-left: 25px; }
 
 .computer {
   background-image: url(../images/computer.png);
@@ -125,11 +123,7 @@ body {
 .sector {
   height: 28px;
   width: 28px;
-<<<<<<< HEAD
-  box-shadow: 2px 0 0 0 #C0C0C0, 0 2px 0 0 #C0C0C0, 2px 2px 0 0 #C0C0C0, 2px 0 0 0 #C0C0C0 inset, 0 1px 0 0 #C0C0C0 inset;
-=======
-  box-shadow: 3px 0 0 0 black, 0 3px 0 0 black, 3px 3px 0 0 black, 3px 0 0 0 black inset, 0 3px 0 0 black inset;
->>>>>>> devMeade
+  box-shadow: 2px 0 0 0 black, 0 2px 0 0 black, 2px 2px 0 0 black, 2px 0 0 0 black inset, 0 1px 0 0 black inset;
   display: inline-block;
   float: left; }
 

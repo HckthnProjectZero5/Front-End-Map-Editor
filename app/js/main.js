@@ -93,7 +93,7 @@ $('#map div').each(function() {
 
 // Click event creating map object and sending it to server
 $('#submit').on('click', function(e) {
-  e.preventDefault();
+  // e.preventDefault();
 
   var name = $('#title').val();
   var budget = $('#budget').val();
